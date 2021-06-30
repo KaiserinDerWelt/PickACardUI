@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PickACardUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="Card Picker App" Height="450" Width="800">
+    <Grid Background="#FFE1DDE4">
+        <Image HorizontalAlignment="Left" Height="100" Margin="667,317,0,0" VerticalAlignment="Top" Width="100" Source="/pug.png" Stretch="Fill" StretchDirection="Both" Cursor="IBeam">
+            <Image.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Image.OpacityMask>
+        </Image>
+        <TextBlock HorizontalAlignment="Center" Margin="0,30,0,0" Text="Pugishka Card Picker" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" FontFamily="Algerian"/>
+        <Image HorizontalAlignment="Left" Height="61" Margin="667,10,0,0" VerticalAlignment="Top" Width="100" Source="/flag.PNG"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="29,10,0,0" VerticalAlignment="Top" Width="100" Source="/winning-poker-hand-four-aces-playing-cards-suits-white_272787-617.jpg"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="29,317,0,0" VerticalAlignment="Top" Width="100" Source="/lady.PNG"/>
     </Grid>
 </Window>

@@ -6,4 +6,18 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="flag.PNG" />
+    <None Remove="lady.PNG" />
+    <None Remove="pug.png" />
+    <None Remove="winning-poker-hand-four-aces-playing-cards-suits-white_272787-617.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="flag.PNG" />
+    <Resource Include="lady.PNG" />
+    <Resource Include="pug.png" />
+    <Resource Include="winning-poker-hand-four-aces-playing-cards-suits-white_272787-617.jpg" />
+  </ItemGroup>
+
 </Project>
