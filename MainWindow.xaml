@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PickACardUI"
         mc:Ignorable="d"
-        Title="Card Picker App" Height="450" Width="800">
+        Title="Card Picker App" Height="350" Width="800">
     <Grid Background="#FFE1DDE4">
-        <Image HorizontalAlignment="Left" Height="100" Margin="667,317,0,0" VerticalAlignment="Top" Width="100" Source="/pug.png" Stretch="Fill" StretchDirection="Both" Cursor="IBeam">
+        <Image HorizontalAlignment="Left" Height="100" Margin="284,225,0,0" VerticalAlignment="Top" Width="100" Source="/pug.png" Stretch="Fill" StretchDirection="Both" Cursor="IBeam">
             <Image.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -18,9 +18,9 @@
         <TextBlock HorizontalAlignment="Center" Margin="0,30,0,0" Text="Pugishka Card Picker" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" FontFamily="Algerian"/>
         <Image HorizontalAlignment="Left" Height="61" Margin="667,10,0,0" VerticalAlignment="Top" Width="100" Source="/flag.PNG"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="29,10,0,0" VerticalAlignment="Top" Width="100" Source="/winning-poker-hand-four-aces-playing-cards-suits-white_272787-617.jpg"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="29,317,0,0" VerticalAlignment="Top" Width="100" Source="/lady.PNG"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="29,225,0,0" VerticalAlignment="Top" Width="100" Source="/lady.PNG"/>
         <Label Content="How Many Cards Should I Pick? " HorizontalAlignment="Left" Margin="29,131,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" FontFamily="Bodoni MT Condensed" Width="241"/>
-        <Slider HorizontalAlignment="Left" Margin="32,185,0,0" VerticalAlignment="Top" Width="194" RenderTransformOrigin="0.5,0.5" Foreground="#FFF12828" ValueChanged="Slider_ValueChanged">
+        <Slider x:Name="numberOfCards" HorizontalAlignment="Left" Margin="32,185,0,0" VerticalAlignment="Top" Width="194" RenderTransformOrigin="0.5,0.5" Foreground="#FF44C926" ValueChanged="Slider_ValueChanged" IsSnapToTickEnabled="True" TickPlacement="BottomRight" Minimum="1" Maximum="15" Background="#FF3DEAAB">
             <Slider.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -30,7 +30,7 @@
                 </TransformGroup>
             </Slider.RenderTransform>
         </Slider>
-        <ListBox Margin="380,134,33,133" Background="#FF85F3C1"/>
-        <Button Content="Pick some Cards" HorizontalAlignment="Left" Margin="29,276,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Algerian" FontWeight="Normal" Background="#FF32EE98" BorderBrush="#FF6CEC14"/>
+        <ListBox x:Name="listOfCards" Margin="400,134,33,12" Background="#FF85F3C1" SelectionChanged="ListBox_SelectionChanged" FontSize="20"/>
+        <Button Content="Pick some Cards" HorizontalAlignment="Left" Margin="139,256,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Algerian" FontWeight="Normal" Background="#FF32EE98" BorderBrush="#FF6CEC14" Click="Button_Click"/>
     </Grid>
 </Window>
